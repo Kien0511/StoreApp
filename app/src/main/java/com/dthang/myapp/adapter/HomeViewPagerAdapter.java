@@ -30,8 +30,8 @@ public class HomeViewPagerAdapter extends FragmentPagerAdapter {
     private void initList() {
 //        mListFragments.add(new HighlightsFragment());
 //        mListFragments.add(new PromotionsFragment());
-        mListFragments.add(new TechnologyFragment());
-        mListFragments.add(new TechnologyFragment());
+//        mListFragments.add(new TechnologyFragment());
+//        mListFragments.add(new TechnologyFragment());
         mListFragments.add(new TechnologyFragment());
 //        mListFragments.add(new HouseAndLifeFragment());
 //        mListFragments.add(new FashionFragment());
@@ -40,8 +40,8 @@ public class HomeViewPagerAdapter extends FragmentPagerAdapter {
 //        mListFragments.add(new SportAndTravelFragment());
 //        mListFragments.add(new TrademarkFragment());
 
-        mListTitles.add("Nổi bật");
-        mListTitles.add("Chương trình khuyến mãi");
+//        mListTitles.add("Nổi bật");
+//        mListTitles.add("Chương trình khuyến mãi");
         mListTitles.add("Thiết bị điện tử");
 //        mListTitles.add("Nhà cửa & đời sống");
 //        mListTitles.add("Thời trang");

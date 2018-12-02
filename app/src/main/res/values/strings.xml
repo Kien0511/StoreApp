@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My App</string>
+    <string name="app_name">Store</string>
     <string name="facebook_app_id">2160212667339826</string>
     <string name="fb_login_protocol_scheme">fb2160212667339826</string>
     <string name="title_welcome1">Thế giới mua sắm trong tầm tay bạn</string>
@@ -20,4 +20,6 @@
         <font fgcolor="#08f4fc"><u>các điều khoản bảo mật</u></font>
          của Lazada
     </string>
+    <string name="chi_ti_t_s_n_ph_m">Chi tiết sản phẩm</string>
+    <string name="danh_s_ch_s_n_ph_m">Danh sách sản phẩm</string>
 </resources>

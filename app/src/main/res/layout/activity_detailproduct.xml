@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_marginTop="?attr/actionBarSize"
-                android:padding="10dp"
+                android:padding="20dp"
                 app:layout_collapseMode="parallax"
                 >
 
@@ -76,6 +76,22 @@
                 app:layout_collapseMode="pin"
                 android:background="@color/colorToolbar"
                 >
+
+                <ImageView
+                    android:id="@+id/bt_back"
+                    android:layout_marginEnd="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_back_black_24dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chi_ti_t_s_n_ph_m"
+                    android:textSize="20sp"
+                    android:textColor="#ffffff"
+                    />
 
             </android.support.v7.widget.Toolbar>
 

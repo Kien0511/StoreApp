@@ -54,6 +54,10 @@ public class DetailProductActivity extends AppCompatActivity implements IViewPro
 
     TextView txtProductName, txtProductPrice, txtNameOfPackingShop, txtProductDetailInfomation;
 
+    private ImageView bt_back;
+
+    private DetailProductActivity detailProductActivity = this;
+
     Toolbar toolbar;
 
     ImageView showProductDetailInfomation;
@@ -83,6 +87,14 @@ public class DetailProductActivity extends AppCompatActivity implements IViewPro
         ll_ProductParameter = findViewById(R.id.ll_ProductParameter);
         imAddCart = findViewById(R.id.imAddCart);
 
+        bt_back = findViewById(R.id.bt_back);
+
+        bt_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                detailProductActivity.finish();
+            }
+        });
 
         setSupportActionBar(toolbar);
 

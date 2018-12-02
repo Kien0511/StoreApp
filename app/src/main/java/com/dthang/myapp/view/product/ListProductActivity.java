@@ -16,6 +16,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 
 import com.dthang.myapp.R;
@@ -37,6 +38,10 @@ public class ListProductActivity extends AppCompatActivity implements ViewHandle
     private ImageButton bt_changeadarter;
     private ProgressBar prb_loadmore;
 
+    private ImageView bt_back;
+
+    private ListProductActivity listProductActivity = this;
+
     private boolean isGripView = true;
 
     private List<Product> products;
@@ -57,6 +62,14 @@ public class ListProductActivity extends AppCompatActivity implements ViewHandle
 
         initView();
 
+        bt_back = findViewById(R.id.bt_back);
+
+        bt_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listProductActivity.finish();
+            }
+        });
 
         Intent intent = getIntent();
 
@@ -85,9 +98,6 @@ public class ListProductActivity extends AppCompatActivity implements ViewHandle
 
         bt_changeadarter.setOnClickListener(this);
 
-        getSupportActionBar().setTitle("Danh sách sản phẩm");
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         gridSpacingItemDecoration = new GridSpacingItemDecoration(5);
 
     }

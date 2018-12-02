@@ -5,6 +5,8 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.dthang.myapp.R;
 import com.dthang.myapp.adapter.CartAdapter;
@@ -18,6 +20,10 @@ public class CartActivity extends AppCompatActivity implements IViewCart {
     RecyclerView rcvCart;
     PresenterLogicCart presenterLogicCart;
 
+    private ImageView bt_back;
+
+    private CartActivity cartActivity = this;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +32,15 @@ public class CartActivity extends AppCompatActivity implements IViewCart {
         rcvCart = findViewById(R.id.rcvCart);
         presenterLogicCart = new PresenterLogicCart(this);
         presenterLogicCart.GetListProductInCart(this);
+
+        bt_back = findViewById(R.id.bt_back);
+
+        bt_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cartActivity.finish();
+            }
+        });
 
     }
 

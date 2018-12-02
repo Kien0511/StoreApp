@@ -280,56 +280,84 @@
             android:background="#cfc9c9"
             android:orientation="horizontal">
 
-            <FrameLayout
+            <LinearLayout
+                android:gravity="center"
+                android:padding="10dp"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-                <Button
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40sp"
                     android:layout_gravity="center"
-                    android:background="@drawable/bg_bt_technology"
-                    android:drawableTop="@drawable/iconbag"
+                    android:src="@drawable/iconbag" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:padding="10dp"
+                    android:gravity="center"
                     android:text="Giao hàng tận nơi"
-                    android:textAllCaps="false" />
+                    android:textAllCaps="false"
+                    android:textColor="#111" />
 
-            </FrameLayout>
+            </LinearLayout>
 
-            <FrameLayout
+            <LinearLayout
+                android:gravity="center"
+                android:padding="10dp"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-                <Button
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40sp"
                     android:layout_gravity="center"
-                    android:background="@drawable/bg_bt_technology"
-                    android:drawableTop="@drawable/iconmoney"
+                    android:src="@drawable/iconmoney" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:padding="10dp"
-                    android:text="Thương gia đáng tin cậy"
-                    android:textAllCaps="false" />
+                    android:gravity="center"
+                    android:text="Giao hàng tận nơi"
+                    android:textAllCaps="false"
+                    android:textColor="#111" />
 
-            </FrameLayout>
+            </LinearLayout>
 
-            <FrameLayout
+            <LinearLayout
+                android:gravity="center"
+                android:padding="10dp"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-                <Button
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40sp"
                     android:layout_gravity="center"
-                    android:background="@drawable/bg_bt_technology"
-                    android:drawableTop="@drawable/iconsercurity"
-                    android:padding="10dp"
-                    android:text="Bảo vệ khách hàng"
-                    android:textAllCaps="false" />
+                    android:src="@drawable/iconsercurity" />
 
-            </FrameLayout>
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:text="Giao hàng tận nơi"
+                    android:textAllCaps="false"
+                    android:textColor="#111" />
+
+            </LinearLayout>
+
 
         </LinearLayout>
 
