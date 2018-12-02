@@ -97,8 +97,8 @@ public class HomeActivity extends AppCompatActivity implements ViewHandleMenu, G
     @Override
     protected void onStart() {
         super.onStart();
-        invalidateOptionsMenu();
         //cho kien
+        int a = 0;
     }
 
 
