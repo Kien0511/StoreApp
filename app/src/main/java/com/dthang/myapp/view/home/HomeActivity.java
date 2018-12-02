@@ -91,13 +91,13 @@ public class HomeActivity extends AppCompatActivity implements ViewHandleMenu, G
         initView();
         handleView();
         initGoogleApiClient();
-
+        handleMenus();
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        handleMenus();
+        invalidateOptionsMenu();
     }
 
 
