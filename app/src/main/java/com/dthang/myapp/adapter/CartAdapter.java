@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dthang.myapp.R;
+import com.dthang.myapp.model.cart.ModelCart;
 import com.dthang.myapp.model.objectclass.Product;
 
 import java.text.DecimalFormat;
@@ -38,7 +39,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder>{
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         NumberFormat numberFormat = new DecimalFormat("###,###");
         String price = numberFormat.format(list.get(position).getPRODUCT_PRICE()).toString();
         holder.txtName.setText(list.get(position).getPRODUCT_NAME());
@@ -52,7 +53,11 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder>{
         holder.imDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, "xóa sp", Toast.LENGTH_SHORT).show();
+                ModelCart modelCart = new ModelCart();
+                modelCart.open(context);
+                modelCart.DeleteCartProduct(list.get(position).getPRODUCT_ID());
+                list.remove(position);
+                notifyDataSetChanged();
             }
         });
     }
