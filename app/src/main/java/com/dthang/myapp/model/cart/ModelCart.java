@@ -70,4 +70,15 @@ public class ModelCart {
         return list;
     }
 
+    public boolean DeleteCartProduct(int product_id)
+    {
+        long id = database.delete(DataProduct.TB_CART,DataProduct.TB_CART_PRODUCT_ID + " = '" + product_id + "'",null);
+
+        if(id > 0)
+        {
+            return true;
+        }
+        return false;
+    }
+
 }
