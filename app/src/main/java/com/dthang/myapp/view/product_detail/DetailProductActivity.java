@@ -123,6 +123,12 @@ public class DetailProductActivity extends AppCompatActivity implements IViewPro
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        invalidateOptionsMenu();
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.home_menu,menu);
         MenuItem iCart = menu.findItem(R.id.it_cart);
@@ -139,6 +145,8 @@ public class DetailProductActivity extends AppCompatActivity implements IViewPro
                 startActivity(intent);
             }
         });
+
+
         return true;
     }
 

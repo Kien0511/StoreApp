@@ -6,6 +6,7 @@ import android.opengl.EGLExt;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
@@ -26,6 +27,7 @@ import com.dthang.myapp.customview.ILoadMoreRCV;
 import com.dthang.myapp.customview.LoadMoreRCV;
 import com.dthang.myapp.model.objectclass.Product;
 import com.dthang.myapp.presenter.product.PresenterHandleLogicProduct;
+import com.dthang.myapp.presenter.product_detail.PresenterLogicProductDetail;
 
 import java.util.List;
 
@@ -84,6 +86,8 @@ public class ListProductActivity extends AppCompatActivity implements ViewHandle
         Log.e(TAG, id + "___" + name + "___" + isProductType);
         productAdapter = new ProductAdapter(products, this, R.layout.item_rcv_gridviewproducts);
         initRecyclerView();
+
+
 
     }
 

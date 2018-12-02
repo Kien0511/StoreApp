@@ -3,6 +3,7 @@ package com.dthang.myapp.view.Cart;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -44,10 +45,16 @@ public class CartActivity extends AppCompatActivity implements IViewCart {
 
     }
 
+
+
     @Override
     public void ShowListProductInCart(List<Product> list) {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
         rcvCart.setLayoutManager(layoutManager);
+
+        RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(this,LinearLayoutManager.VERTICAL);
+
+        rcvCart.addItemDecoration(itemDecoration);
 
         CartAdapter adapter = new CartAdapter(this,list);
         rcvCart.setAdapter(adapter);
